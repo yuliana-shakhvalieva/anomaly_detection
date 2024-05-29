@@ -1,0 +1,43 @@
+{
+  "name": "arima",
+  "contributors": [
+    "Alexander Geiger <geigera@mit.edu>",
+    "Sarah Alnegheimish <smish@mit.edu>"
+  ],
+  "description": "ARIMA Model",
+  "classifiers": {
+    "type": "estimator",
+    "subtype": "regressor"
+  },
+  "modalities": [],
+  "primitive": "src.orion_applications.primitives.arima.ARIMA",
+  "produce": {
+    "method": "predict",
+    "args": [
+      {
+        "name": "X",
+        "type": "ndarray"
+      }
+    ],
+    "output": [
+      {
+        "name": "y",
+        "type": "ndarray"
+      }
+    ]
+  },
+  "hyperparameters": {
+    "fixed": {
+      "trend": {
+        "type": "str",
+        "default": "t"
+      },
+      "steps": {
+        "type": "int",
+        "default": 10
+      }
+    },
+    "tunable": {
+    }
+  }
+}
